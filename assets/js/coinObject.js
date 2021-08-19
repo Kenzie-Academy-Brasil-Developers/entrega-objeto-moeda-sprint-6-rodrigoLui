@@ -27,9 +27,8 @@ const coin = {
       if (this.state === 0) {
         return "Heads"
       }
-      if (this.state === 1) {
-        return "Tails"
-      }
+      return "Tails"
+      
     },
   
     toHTML: function () {
@@ -37,13 +36,11 @@ const coin = {
       // Colocar uma imagem correspondente a essa valor.
       // image.src = ".././img/coroa.png"
       // image.alt = "Heads/Tails"
+      image.src = "./assets/img/coroa.png"
+      image.alt = this.toString()
+
       if (this.state === 0) {
         image.src = "./assets/img/cara.png"
-        image.alt = "Heads"
-      }
-      if (this.state === 1) {
-        image.src = "./assets/img/coroa.png"
-        image.alt = "Tails"
       }
       return image;
     },
