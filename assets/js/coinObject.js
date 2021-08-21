@@ -1,4 +1,4 @@
-function bodyOrganization () {
+const bodyOrganization = () => {
   const body = document.querySelector('body')
   const section = document.createElement('section')
   const divRight = document.createElement('div')
@@ -8,8 +8,8 @@ function bodyOrganization () {
   section.appendChild(divRight)
   section.appendChild(divLeft)
   body.appendChild(section)
-
-} bodyOrganization()
+} 
+bodyOrganization()
 
 const coin = {
     state: 0,
@@ -46,8 +46,8 @@ const coin = {
     },
 };
 
-function display20Flips() {
-  const results = [];
+const display20Flips = () => {
+  const results = new Array
   // Use um loop para arremessar a moeda 20 vezes.
   // Depois que o seu loop terminar, exiba o resultado na página no formato de TEXTO.
   // Além de exibir os resultados na página, não esqueça
@@ -65,16 +65,12 @@ function display20Flips() {
     divRight.appendChild(p)
   }
   return results
-} display20Flips()
+}
+display20Flips()
 
-function display20Images() {
-  const results = [];
-  // Use um loop para arremessar a moeda 20 vezes.
-  // Depois que o seu loop terminar, exiba o resultado na página no formato de IMAGEM.
-  // Além de exibir os resultados na página, não esqueça
-  // de retornar o valor de "results".
-  // Caso esqueça de retornar "results", sua função não
-  // irá passar nos testes.
+const display20Images = () => {
+  const results = new Array
+
   for (let i = 0; i < 20; i++) {
     coin.flip()
     results.push(coin.toHTML())
@@ -83,4 +79,5 @@ function display20Images() {
     divLeft.appendChild(results[i])
   }
   return results
-} display20Images()
+} 
+display20Images()
